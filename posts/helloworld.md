@@ -7,7 +7,6 @@ tags:
   - programming
   - web-dev
 bannerImage: /img/default-banner.jpeg
-
 tablecontents:
   - id: introduction
     text: Introduction
