@@ -2,7 +2,7 @@ name: Publish on GitHub Pages
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 permissions:
   contents: read
@@ -23,15 +23,15 @@ jobs:
           deno-version: v1.x
 
       - name: Build site
-        run: deno task build --location=https://lumeland.github.io/base-blog/
-      
+        run: deno task build --location=https://derikvanschaik.github.io/blog/
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
-      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: '_site'
+          path: "_site"
 
       - name: Deploy to GitHub Pages
         id: deployment
