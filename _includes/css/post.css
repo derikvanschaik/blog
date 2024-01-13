@@ -13,15 +13,15 @@
 }
 .post-container{
   display: flex;
-}
-.table-of-contents-container{
-  padding: 25px 20px;
+  justify-content: space-between;
 }
 .table-of-contents{
   position: sticky;
   top: 0;
   right: 0;
   min-width: 200px;
+  max-width: 100%;
+  padding: 20px;
   & .table-of-contents-links{
     display: flex;
     flex-direction: column;
@@ -62,9 +62,6 @@
 
 @media(max-width: 600px){
   .post-body{
-    width: 100%;
-  }
-  .table-of-contents-container{
     width: 100%;
   }
   .post-container{

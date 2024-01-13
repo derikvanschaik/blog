@@ -8,7 +8,15 @@ tags:
   - web-dev
 bannerImage: /img/default-banner.jpeg
 
+tablecontents:
+  - id: introduction
+    text: Introduction
+  - id: journey
+    text: Programming Journey
+
 ---
+
+### Introduction {#introduction}
 I am really excited to try out this new blogging thing.
 I have never been much of a writer, but I thought that it would be 
 interesting to archive my experiences/thoughts somewhere so that I could
@@ -20,33 +28,33 @@ about back then?
 
 Maybe I should make a brief history about my programming journey...
 
-## D\(er\)_ik's programming journey:
+### D\(er\)_ik's programming journey {#journey}
 
-- ### Learned programming in CSC 110
+#### Learned programming in CSC 110
 
-  This was in the winter of 2019, and I learned to program in python. I was majoring 
-  in economics at the time. 
+This was in the winter of 2019, and I learned to program in python. I was majoring 
+in economics at the time. 
 
-- ### Went all in on programming during the start of the pandemic
+#### Went all in on programming during the start of the pandemic
 
-  Took CSC 115, CSC 230, CSC 225-226, SENG 265 and more importantly, started doing 
-  side projects
+Took many 100-200 level computer science/software engineering courses and more importantly, started doing 
+side projects
 
-- ### Learned Javascript XD
+#### Learned Javascript XD
 
-  This was paramount to building web applications
+This was paramount to building web applications
 
-- ### Switched major to Computer Science
+#### Switched major to Computer Science
 
-  YUP. 
+YUP. 
 
-- ### Did 4 internships + work part time as a front end developer
+#### Did 4 full stack internships + now work part time as a front end developer
 
-  I am a web developer now I guess. 
+I am a web developer now I guess. 
 
 
-- ### TODO: graduate in Computer Science
+#### TODO: complete degree
 
-  Almost there.
+Almost there.
 
 Stay tuned for more thoughts + posts!
