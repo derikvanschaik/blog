@@ -12,7 +12,6 @@ tablecontents:
     text: Introduction
   - id: journey
     text: Programming Journey
-
 ---
 
 ### Introduction {#introduction}
