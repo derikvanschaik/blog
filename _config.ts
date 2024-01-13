@@ -22,24 +22,28 @@ site
   .use(codeHighlight())
   .use(basePath())
   .use(sitemap())
-  .use(pageFind({
-    ui: {
-      resetStyles: false,
-    },
-  }))
+  .use(
+    pageFind({
+      ui: {
+        resetStyles: false,
+      },
+    })
+  )
   .use(slugifyUrls({ alphanumeric: false }))
-  .use(feed({
-    output: ["/feed.json", "/feed.xml"],
-    query: "type=posts",
-    info: {
-      title: "=site.title",
-      description: "=site.description",
-    },
-    items: {
-      title: "=title",
-      content: "$.post-body",
-    },
-  }))
+  .use(
+    feed({
+      output: ["/feed.json", "/feed.xml"],
+      query: "type=posts",
+      info: {
+        title: "=site.title",
+        description: "=site.description",
+      },
+      items: {
+        title: "=title",
+        content: "$.post-body",
+      },
+    })
+  )
   .use(resolveUrls())
   .use(netlifyCMS({ netlifyIdentity: true }));
 

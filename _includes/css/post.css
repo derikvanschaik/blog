@@ -1,5 +1,7 @@
 .post-header {
   padding: 5vh 0;
+  max-width: 900px;
+  margin: 0 auto;
 }
 .post-title {
   font-size: 4rem;
@@ -14,6 +16,8 @@
 .post-body {
   font-size: 1.2em;
   line-height: 1.4;
+  max-width: 900px;
+  margin: 0 auto;
 
   & p,
   & ul,

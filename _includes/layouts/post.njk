@@ -17,6 +17,12 @@ bodyClass: body-post
     </time>
   </div>
 
+  {% if bannerImage %}
+  <div>
+    {{ comp.banner({ image: "/img/default-banner.jpeg" }) | safe }}
+  </div>
+  {% endif %}
+
   <div class="post-body">
     {{ content | safe }}
   </div>
