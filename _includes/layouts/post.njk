@@ -23,8 +23,23 @@ bodyClass: body-post
   </div>
   {% endif %}
 
-  <div class="post-body">
-    {{ content | safe }}
+  <div class="post-container">
+    
+    <div class="post-body">
+      {{ content | safe }}
+    </div>
+
+    <div class="table-of-contents-container">
+      <div class="table-of-contents">
+        <h3>Table of Contents</h3>
+        <hr/>
+        <div class="table-of-contents-links">
+          <a href="#" >What is this about?<a/>
+          <a href="#" >test here<a/>
+        </div>
+      </div>
+    </div>
+
   </div>
 </article>
 
