@@ -29,7 +29,7 @@ bodyClass: body-post
       {{ content | safe }}
     </div>
     <h1>{{ tablecontents.length }}</h1>
-    {% if tablecontents.length %}
+    {% if tablecontents %}
       {% include "templates/tablecontents.njk" %}
     {% endif %}
 
