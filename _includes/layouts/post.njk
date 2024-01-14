@@ -33,13 +33,13 @@ bodyClass: body-post
     {% if tablecontents %}
       <div class="table-of-contents-container">
         <div class="table-of-contents">
-        <h3>Table of Contents</h3>
-        <hr/>
-        {% for content in tablecontents%}
-        <div class="table-of-contents-links">
-            <a href="#{{content.id}}" >{{ content.text}}<a/>
-        </div>
-        {% endfor %}
+          <h3>Table of Contents</h3>
+          <hr/>
+          <div class="table-of-contents-links">
+            {% for content in tablecontents %}
+                <a href="#{{content.id}}" >{{ content.text}}</a>
+            {% endfor %}
+          </div>
         </div>
     </div>
     {% endif %}
@@ -66,3 +66,44 @@ bodyClass: body-post
     {% endif %}
   </ul>
 </nav>
+
+<script>
+  const entriesContainer = document.querySelector('.table-of-contents-links');
+  let links;
+
+
+
+  if(entriesContainer){
+    links = [ ...entriesContainer.querySelectorAll('a') ];
+    const entries = links
+                        .map(el => el.getAttribute('href') )
+                        .map(href => document.querySelector(`${href}`));
+
+    entries.forEach(entry => {
+            const observer = new IntersectionObserver(handleIntersection, {
+              root: null,    // Use the viewport as the root
+              threshold: [0], // Trigger callback when the entire target is visible
+            });
+            observer.observe(entry);
+        }); 
+
+  }
+
+  // Function to be called when the target element is pretty much scrolled to the top of the viewport
+  function handleIntersection(entries, observer) {
+      entries.forEach( (entry, idx) => {
+          const targetTop = entry.boundingClientRect.top;
+          const rootTop = entry.rootBounds.top;
+
+          if (entry.isIntersecting) {
+            const href = entry.target.getAttribute('id');
+            const tableOfContentsLink = document.querySelector(`a[href="#${href}"]`);
+            const lastActive = document.querySelector(`a:is(.active)`)
+            if(lastActive){
+              lastActive.classList.remove('active');
+            }
+            tableOfContentsLink.classList.add('active');
+          }
+      });
+  }
+</script>

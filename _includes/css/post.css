@@ -25,6 +25,12 @@
   & .table-of-contents-links{
     display: flex;
     flex-direction: column;
+    & a.active::before{
+      content: "\2192"; /* Unicode character for a right arrow */
+      margin-right: 5px;
+      position: absolute;
+      left: -5px;
+    }
   }
 }
 .post-body {
