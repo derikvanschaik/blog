@@ -31,7 +31,17 @@ bodyClass: body-post
     <h1>{{ tablecontents.length }}</h1>
     {% if tablecontents %}
       <h1>Here!</h1>
-      {% include "templates/tablecontents.njk" %}
+      <div class="table-of-contents-container">
+        <div class="table-of-contents">
+        <h3>Table of Contents</h3>
+        <hr/>
+        {% for content in tablecontents%}
+        <div class="table-of-contents-links">
+            <a href="#{{content.id}}" >{{ content.text}}<a/>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
     {% endif %}
 
   </div>
